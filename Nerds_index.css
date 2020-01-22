@@ -5,7 +5,7 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #2f3439;
+  color: #283136;
 
   background-color: #fff;
 }
@@ -15,7 +15,41 @@ a {
 }
 
 .btn {
-  background-color: red;
+  font: inherit;
+  line-height: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.btn-base,
+.btn-red {
+    background-color: #fb565a;
+}
+
+.btn-base:hover,
+.btn-red:hover {
+    background-color: #e74246;
+}
+
+.btn-green {
+  background-color: #00ca74;
+}
+
+.btn-green:hover {
+  background-color: #00bc6c;
+}
+
+.btn-yellow {
+  background-color: #efc84a;
+}
+
+.btn-yellow:hover {
+  background-color: #eab534;
 }
 
 .grey {
@@ -68,4 +102,101 @@ a {
 
 .slide-3 {
   background: url(img/slide3.png) no-repeat;
+}
+
+.advantage-header {
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.studio-header {
+  font-size: 45px;
+  line-height: 45px;
+  color: #000;
+  font-weight: 600;
+}
+
+.studio-bold {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.orders-list,
+.statistic {
+  list-style: none;
+}
+
+.statistic p {
+    line-height: 18px;
+}
+
+.statistic p span {
+  font-size: 45px;
+  line-height: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+.clients-list {
+  list-style: none;
+}
+
+.clients-list li a svg:hover {
+  fill: #000;
+}
+
+.contacts-block .contacts-header {
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
+  font-weight: bold;
+}
+
+.contacts-block p {
+    line-height: 18px;
+    color: #666;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.partnership-header {
+  font-size: 36px;
+  line-height: 36px;
+  color: #000;
+  font-weight: bold;
+}
+
+.partnership .sale {
+  line-height: 22px;
+  color: #444;
+}
+
+.popup label {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.popup-item input,
+.popup-item textarea {
+  font: inherit;
+  background-color:: transparent;
+
+  border: 2px solid #d7dcde;
+}
+
+.popup-item input:hover,
+.popup-item textarea:hover {
+  border-color: #b4b9bb;
+}
+
+.popup-item input:focus,
+.popup-item textarea:focus {
+  border-color: #000;
+  outline: none;
 }
