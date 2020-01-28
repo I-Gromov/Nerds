@@ -1,3 +1,15 @@
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+  margin: 0 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,20 +27,21 @@ a {
 }
 
 .btn {
+  display: inline-block;
   font: inherit;
-  line-height: 18px;
+  line-height: 50px;
   font-weight: 600;
   color: #fff;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-
   border: none;
+  height: 50px;
 }
 
-.btn-base,
 .btn-red {
     background-color: #fb565a;
+    width: 160px;
 }
 
 .btn-base:hover,
@@ -38,6 +51,7 @@ a {
 
 .btn-green {
   background-color: #00ca74;
+  width: 160px;
 }
 
 .btn-green:hover {
@@ -46,6 +60,7 @@ a {
 
 .btn-yellow {
   background-color: #efc84a;
+  width: 160px;
 }
 
 .btn-yellow:hover {
@@ -56,19 +71,59 @@ a {
     background-color: #eee;
 }
 
+.container {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header {
+  min-height: 114px;
+}
+
 .main-navigation {
+  display: flex;
+  justify-content: space-between;
+  min-height: 65px;
+
   line-height: 30px;
   text-transform: uppercase;
   color: #000;
   font-weight: 600;
+
+}
+
+.main-header-logo {
+padding-top: 49px;
 }
 
 .navigation-list {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 81px;
   list-style: none;
+}
+
+.navigation-list li {
+  margin-left: 45px;
+}
+
+.navigation-list li:first-child {
+  margin-left: 0;
+}
+
+.navigation-list .cart {
+  margin-left: auto;
 }
 
 .navigation-list a {
   color: #000;
+  width: 160px;
 }
 
 .navigation-list a:hover,
@@ -82,8 +137,27 @@ a {
   fill: rgb(48, 48, 48, 0.8);
 }
 
+.slider {
+  margin-bottom: 80px;
+}
+
 .slide-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 267px;
+}
+
+.slide {
+  box-sizing: border-box;
+  padding-top: 80px;
+  height: 413px;
 }
 
 .slide-header {
@@ -92,8 +166,24 @@ a {
   color: #000;
 }
 
+.slide-header {
+  width: 515px;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-text {
+  width: 410px;
+  margin: 0;
+  padding: 0;
+}
+
+.slide .btn {
+  width: 240px;
+}
+
 .slide-1 {
-  background: url(img/slide1.png) no-repeat;
+  background: url(img/slide1.png) no-repeat 431px 0;
 }
 
 .slide-2 {
@@ -104,8 +194,23 @@ a {
   background: url(img/slide3.png) no-repeat;
 }
 
+.advantages {
+  margin-bottom: 80px;
+}
+
 .advantages ul {
+  min-height: 347px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.advantage-item {
+  min-height: 347px;
+  width:300px;
 }
 
 .advantage-header {
@@ -114,6 +219,21 @@ a {
   color: #000;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.studio {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.studio .studio-left {
+  width: 660px;
+  margin-right: auto;
+}
+
+.studio .studio-right {
+  width: 360px;
+  margin-left: auto;
 }
 
 .studio-header {
@@ -145,12 +265,29 @@ a {
   font-weight: bold;
 }
 
-.clients-list {
-  list-style: none;
+.clients {
+  margin-bottom: 80px;
+  border-top: solid 2px #eeee;
+  border-bottom: solid 2px #eeee;
 }
 
-.clients-list li a svg:hover {
+.clients ul {
+  height: 180px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.clients ul li a svg:hover {
   fill: #000;
+}
+
+.contacts {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contacts-block .contacts-header {
@@ -165,11 +302,22 @@ a {
     color: #666;
 }
 
+.main-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 217px;
+}
+
 .main-footer ul {
   list-style: none;
 }
 
-.partnership-header {
+.partnership {
+  margin-left: 140px;
+}
+
+.partnership .partnership-header {
   font-size: 36px;
   line-height: 36px;
   color: #000;
