@@ -352,14 +352,34 @@ padding-top: 49px;
   padding: 0;
 }
 
+.clients ul li {
+	text-align: center;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+.clients ul li:first-child {
+	padding-right: 18px;
+}
+
+.clients ul li:last-child {
+	padding-left: 32px;
+}
+
 .clients ul li:first-child,
 .clients ul li:last-child {
+	padding-top: 16px;
 	width: 280px;
 }
 
-.clients ul li:nth-child(3),
-.clients ul li:nth-child(4) {
+.clients ul li:nth-child(2),
+.clients ul li:nth-child(3) {
 	width: 298px;
+	padding-top: 10px;
+}
+
+.clients ul li a {
+	display: block;
 }
 
 .clients ul li a svg:hover {
@@ -367,8 +387,9 @@ padding-top: 49px;
 }
 
 .contacts {
-  margin-left: auto;
-  margin-right: auto;
+	box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .contacts-block .contacts-header {
@@ -390,6 +411,16 @@ padding-top: 49px;
   height: 217px;
 }
 
+.main-footer .social-list {
+	display: flex;
+	justify-content: space-between;
+	width: 260px;
+
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .main-footer ul {
   list-style: none;
 }
@@ -403,11 +434,18 @@ padding-top: 49px;
   line-height: 36px;
   color: #000;
   font-weight: bold;
+
+	padding: 0;
+	margin: 0;
+	margin-bottom: 16px;
 }
 
 .partnership .sale {
   line-height: 22px;
   color: #444;
+
+	padding: 0;
+	margin: 0;
 }
 
 .popup label {
