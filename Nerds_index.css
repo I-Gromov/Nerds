@@ -80,6 +80,7 @@ a {
 
 .main-header {
   min-height: 114px;
+
 }
 
 .main-navigation {
@@ -105,7 +106,7 @@ padding-top: 49px;
 
   margin: 0;
   padding: 0;
-  padding-top: 81px;
+  padding-top: 75px;
   list-style: none;
 }
 
@@ -151,17 +152,18 @@ padding-top: 49px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 267px;
+  min-height: 271px;
 }
 
 .slide {
   box-sizing: border-box;
-  padding-top: 80px;
-  height: 413px;
+  padding-top: 69px;
+  height: 420px;
 }
 
 .slide-header {
   font-size: 55px;
+	font-weight: 500;
   line-height: 55px;
   color: #000;
 }
@@ -176,6 +178,7 @@ padding-top: 49px;
   width: 410px;
   margin: 0;
   padding: 0;
+	margin-bottom: 12px;
 }
 
 .slide .btn {
@@ -183,7 +186,7 @@ padding-top: 49px;
 }
 
 .slide-1 {
-  background: url(img/slide1.png) no-repeat 431px 0;
+  background: url(img/slide1.png) no-repeat 431px 7px;
 }
 
 .slide-2 {
@@ -201,7 +204,7 @@ padding-top: 49px;
 .advantages ul {
   min-height: 347px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
 
@@ -211,6 +214,11 @@ padding-top: 49px;
 .advantage-item {
   min-height: 347px;
   width:300px;
+	margin-right: 100px;
+}
+
+.advantage-item img {
+	margin-bottom: 20px;
 }
 
 .advantage-header {
@@ -219,21 +227,33 @@ padding-top: 49px;
   color: #000;
   text-transform: uppercase;
   font-weight: bold;
+
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.advantage-text {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 32px;
 }
 
 .studio {
   display: flex;
-  margin-bottom: 80px;
+	justify-content: space-between;
+  margin-bottom: 57px;
+	border-top: solid 2px #eeee;
 }
 
 .studio .studio-left {
   width: 660px;
-  margin-right: auto;
+	padding-top: 73px;
 }
 
 .studio .studio-right {
   width: 360px;
-  margin-left: auto;
+	padding-top: 40px;
 }
 
 .studio-header {
@@ -241,28 +261,80 @@ padding-top: 49px;
   line-height: 45px;
   color: #000;
   font-weight: 600;
+
+	padding: 0;
+	margin: 0;
+	margin-bottom: 34px;
 }
 
 .studio-bold {
   color: #000;
   text-transform: uppercase;
   font-weight: bold;
+
+	padding: 0;
+	margin: 0;
+}
+
+.studio-left .studio-bold {
+	margin-bottom: 23px;
+}
+
+.studio-text {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 40px;
 }
 
 .orders-list,
 .statistic {
   list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-.statistic p {
+.orders-list li {
+	margin-bottom: 24px;
+	margin-left: 36px;
+}
+
+.orders-list li:last-child {
+		margin-bottom: 0;
+}
+
+.studio-right img {
+	margin-bottom: 30px;
+}
+
+.studio-right .studio-bold {
+	margin-bottom: 42px;
+	margin-left: 16px;
+}
+
+.statistic {
+	display: flex;
+	justify-content: space-between;
+}
+
+.statistic li {
+		width: 120px;
+}
+
+.statistic .statistic-text {
     line-height: 18px;
+		padding: 0;
+		margin: 0;
 }
 
-.statistic p span {
+.statistic .statistic-percent {
   font-size: 45px;
-  line-height: 10px;
+  line-height: 40px;
   color: #000;
   font-weight: bold;
+
+	padding: 0;
+	margin: 0;
+	margin-bottom: 22px;
 }
 
 .clients {
@@ -275,10 +347,19 @@ padding-top: 49px;
   height: 180px;
   list-style: none;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.clients ul li:first-child,
+.clients ul li:last-child {
+	width: 280px;
+}
+
+.clients ul li:nth-child(3),
+.clients ul li:nth-child(4) {
+	width: 298px;
 }
 
 .clients ul li a svg:hover {
