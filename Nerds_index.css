@@ -1,4 +1,6 @@
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -37,6 +39,7 @@ a {
   text-transform: uppercase;
   border: none;
   height: 50px;
+	border-radius: 3px;
 }
 
 .btn-red {
@@ -44,9 +47,14 @@ a {
     width: 160px;
 }
 
-.btn-base:hover,
 .btn-red:hover {
     background-color: #e74246;
+}
+
+.btn-red:active {
+    background-color: #d7373b;
+		color: #df5f62;
+		box-shadow: 0 3px 0px #c13135 inset;
 }
 
 .btn-green {
@@ -58,6 +66,12 @@ a {
   background-color: #00bc6c;
 }
 
+.btn-green:active {
+  background-color: #00aa62;
+	color: #4dc491;
+	box-shadow: 0 3px 0px #009958 inset;
+}
+
 .btn-yellow {
   background-color: #efc84a;
   width: 160px;
@@ -65,6 +79,12 @@ a {
 
 .btn-yellow:hover {
   background-color: #eab534;
+}
+
+.btn-yellow:active {
+  background-color: #e5a722;
+	color: #ebba53;
+	box-shadow: 0 3px 0px #ce961f inset;
 }
 
 .grey {
@@ -101,6 +121,7 @@ padding-top: 49px;
 
 .navigation-list {
   display: flex;
+	flex-wrap: wrap;
   justify-content: space-between;
   width: 800px;
 
@@ -119,12 +140,27 @@ padding-top: 49px;
 }
 
 .navigation-list .cart {
+	position: relative;
   margin-left: auto;
+	padding-left: 40px;
+}
+
+.navigation-list .cart:before {
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: 0px;
+	width: 15px;
+	height: 15px;
+
+	background: url(svg/cart-icon.svg) no-repeat 0 0;
 }
 
 .navigation-list a {
+	display: block;
   color: #000;
-  width: 160px;
+  width: auto;
+	vertical-align: middle;
 }
 
 .navigation-list a:hover,
@@ -133,9 +169,17 @@ padding-top: 49px;
   color: #fb565a;
 }
 
-.main-header-logo svg:hover,
-.main-header-logo svg:active {
+.navigation-list a:active
+ {
+	 color: #a6a6a6;
+}
+
+.main-header-logo svg:hover {
   fill: rgb(48, 48, 48, 0.8);
+}
+
+.main-header-logo svg:active {
+  fill: rgb(48, 48, 48, 0.3);
 }
 
 .slider {
@@ -294,12 +338,23 @@ padding-top: 49px;
 }
 
 .orders-list li {
+	position: relative;
 	margin-bottom: 24px;
-	margin-left: 36px;
+	padding-left: 37px;
 }
 
 .orders-list li:last-child {
 		margin-bottom: 0;
+}
+
+.orders-list li::before {
+	position: absolute;
+	content: "";
+	height: 1px;
+	width: 27px;
+	background-color: #fb565a;
+	top: 11px;
+	left: 0;
 }
 
 .studio-right img {
@@ -360,6 +415,19 @@ padding-top: 49px;
 
 .clients ul li:first-child {
 	padding-right: 18px;
+	position: relative;
+}
+
+.clients ul li:first-child::after,
+.clients ul li:nth-child(2)::after,
+.clients ul li:nth-child(3)::after {
+	position: absolute;
+	top: 18px;
+	right: 0;
+	content: "";
+	width: 2px;
+	height: 52px;
+	background-color: #eee;
 }
 
 .clients ul li:last-child {
@@ -374,16 +442,34 @@ padding-top: 49px;
 
 .clients ul li:nth-child(2),
 .clients ul li:nth-child(3) {
+	position: relative;
 	width: 298px;
 	padding-top: 10px;
 }
+
+.clients ul li:nth-child(2)::after {
+	top: 26px;
+}
+
+.clients ul li:nth-child(3)::after {
+	top: 7px;
+}
+
 
 .clients ul li a {
 	display: block;
 }
 
-.clients ul li a svg:hover {
-  fill: #000;
+.clients ul li a img {
+  opacity: 0.2;
+}
+
+.clients ul li a img:hover {
+  opacity: 1;
+}
+
+.clients ul li a img:active {
+  opacity: 0.1;
 }
 
 .contacts {
@@ -419,6 +505,28 @@ padding-top: 49px;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+.social-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	background-color: #e1e1e1;
+	border-radius: 50%;
+}
+
+.social-btn:hover {
+	background-color: #e74246;}
+
+.social-btn:active {
+	background-color: #d7373b;
+	box-shadow: 0 3px 0 #c13135 inset;
+}
+
+.social-btn:active path {
+	fill: #e37376;
 }
 
 .main-footer ul {
