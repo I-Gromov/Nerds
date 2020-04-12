@@ -32,27 +32,39 @@
 
     <section class="slider grey">
       <div class="container">
-      <h2 class="visually-hidden">Слайдер</h2>
-      <ul class="slide-list">
-        <li class="slide slide-1">
-          <div class="slide-wrapper">
-          <p class="slide-header">Долго, дорого, скрупулезно</p>
-          <p class="slide-text">Математически выверенный дизайн <br> для Вашего сайта или мобильного приложения.</p>
-          <a class="btn btn-red" href="#">Узнать больше</a>
+        <h2 class="visually-hidden">Слайдер</h2>
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+        <div class="slider-control">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
         </div>
-        </li>
-        <li class="slide slide-2 visually-hidden">
-          <p class="slide-header">Любим математику, как никто другой</p>
-          <p class="slide-text">Никакого креатива, только математические формулы<br> для расчета идеальных пропорций.</p>
-          <a class="btn btn-red" href="#">Узнать больше</a>
-        </li>
-        <li class="slide slide-3 visually-hidden">
-          <p class="slide-header">Только ночь, только хардкор</p>
-          <p class="slide-text">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
-          <a class="btn btn-red" href="#">Узнать больше</a>
-        </li>
-      </ul>
-    </div>
+        <ul class="slide-list">
+          <li class="slide slide-1">
+            <div class="slide-wrapper">
+              <p class="slide-header">Долго, дорого, скрупулезно</p>
+              <p class="slide-text">Математически выверенный дизайн <br> для Вашего сайта или мобильного приложения.</p>
+              <a class="btn btn-red" href="#">Узнать больше</a>
+            </div>
+          </li>
+          <li class="slide slide-2">
+            <div class="slide-wrapper">
+              <p class="slide-header">Любим математику как никто другой</p>
+              <p class="slide-text">Никакого креатива, только математические формулы<br> для расчета идеальных пропорций.</p>
+              <a class="btn btn-red" href="#">Узнать больше</a>
+            </div>
+          </li>
+          <li class="slide slide-3">
+            <div class="slide-wrapper">
+              <p class="slide-header">Только ночь, только хардкор</p>
+              <p class="slide-text">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
+              <a class="btn btn-red" href="#">Узнать больше</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="advantages container">
@@ -135,15 +147,15 @@
         <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
           <img src="img/map.png" alt="Карта офиса по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
-          <div class="contacts-block visually-hidden">
+          <div class="contacts-block">
             <p class="contacts-header"> Nёrds design studio</p>
-            <p>19186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
             <p>тел. +7 (812) 275-75-75</p>
-            <button class="btn btn-red">Напишите нам</button>
+            <button class="btn btn-red contacts-btn">Напишите нам</button>
           </div>
         </section>
 
-        <section class="popup visually-hidden">
+        <section class="popup">
           <h2 class="popup-header">Напишите нам</h2>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p class="popup-item">
@@ -152,14 +164,15 @@
             </p>
             <p class="popup-item">
               <label for="popup-email">Ваш e-mail:</label>
-              <input id="popup-email" type="text" name="name" value="" placeholder="email@example.ru">
+              <input id="popup-email" type="text" name="e-mail" value="" placeholder="email@example.ru">
             </p>
             <p class="popup-item">
               <label for="textarea">Текст письма:</label>
-              <textarea id="textarea" name="textarea" >В свободной форме</textarea>
+              <textarea id="textarea" name="message" placeholder="В свободной форме"></textarea>
             </p>
-            <button class="btn btn-base" type="submite" name="button">Отправить</button>
+            <button class="btn btn-red" type="submite" name="button">Отправить</button>
           </form>
+          <button class="modal-close" type="button">Закрыть</button>
         </section>
 
       </main>
@@ -194,5 +207,7 @@
       </div>
     </footer>
 
+    <script src="nerds_index.js">
+    </script>
     </body>
     </html>
